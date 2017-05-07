@@ -1,0 +1,172 @@
+> stryker run stryker.conf.js
+
+[2017-05-07 04:26:07.029] [INFO] InputFileResolver - Found 1 of 2 file(s) to be mutated.
+[2017-05-07 04:26:07.034] [INFO] SandboxCoordinator - Starting initial test run. This may take a while.
+[2017-05-07 04:26:08.526] [INFO] Stryker - Initial test run succeeded. Ran 3 tests in 1 second.
+[2017-05-07 04:26:08.559] [INFO] Stryker - 22 Mutant(s) generated
+[2017-05-07 04:26:08.567] [INFO] SandboxCoordinator - Creating 8 test runners (based on CPU count)
+Mutation testing  [==] 100% (ETC 0.0s)[5 killed] [5 survived] [12 no coverage] [0 timeout] [0 error]
+
+Mutant survived! (no coverage)
+C:\Users\Piotrek\Desktop\TiJO_8\app\app.js: line 12:8
+Mutator: RemoveConditionals
+-       if (typeof str !== 'string') {
++       if (false) {
+
+Mutant survived! (no coverage)
+C:\Users\Piotrek\Desktop\TiJO_8\app\app.js: line 12:8
+Mutator: RemoveConditionals
+-       if (typeof str !== 'string') {
++       if (true) {
+
+Mutant survived! (no coverage)
+C:\Users\Piotrek\Desktop\TiJO_8\app\app.js: line 12:8
+Mutator: BinaryOperator
+-       if (typeof str !== 'string') {
++       if (typeof str === 'string') {
+
+Mutant survived! (no coverage)
+C:\Users\Piotrek\Desktop\TiJO_8\app\app.js: line 12:33
+Mutator: BlockStatement
+-       if (typeof str !== 'string') {
+-           return false;
+-       }
++       if (typeof str !== 'string') {
++   }
+
+Mutant survived! (no coverage)
+C:\Users\Piotrek\Desktop\TiJO_8\app\app.js: line 19:20
+Mutator: RemoveConditionals
+-       for (var i = 0; i <= x; i++) {
++       for (var i = 0; false; i++) {
+
+Mutant survived! (no coverage)
+C:\Users\Piotrek\Desktop\TiJO_8\app\app.js: line 19:20
+Mutator: BinaryOperator
+-       for (var i = 0; i <= x; i++) {
++       for (var i = 0; i < x; i++) {
+
+Mutant survived! (no coverage)
+C:\Users\Piotrek\Desktop\TiJO_8\app\app.js: line 19:20
+Mutator: BinaryOperator
+-       for (var i = 0; i <= x; i++) {
++       for (var i = 0; i > x; i++) {
+
+Mutant survived! (no coverage)
+C:\Users\Piotrek\Desktop\TiJO_8\app\app.js: line 19:28
+Mutator: UpdateOperator
+-       for (var i = 0; i <= x; i++) {
++       for (var i = 0; i <= x; i--) {
+
+Mutant survived! (no coverage)
+C:\Users\Piotrek\Desktop\TiJO_8\app\app.js: line 19:33
+Mutator: BlockStatement
+-       for (var i = 0; i <= x; i++) {
+-           if (az.test(temp[i])) { //sprawdza czy kolejne znaki znajduja sie w przedziale "az"
+-               outputArray.push(temp[i]);
+-           }
+-       }
++       for (var i = 0; i <= x; i++) {
++   }
+
+Mutant survived! (no coverage)
+C:\Users\Piotrek\Desktop\TiJO_8\app\app.js: line 20:12
+Mutator: RemoveConditionals
+-           if (az.test(temp[i])) { //sprawdza czy kolejne znaki znajduja sie w przedziale "az"
++           if (false) { //sprawdza czy kolejne znaki znajduja sie w przedziale "az"
+
+Mutant survived! (no coverage)
+C:\Users\Piotrek\Desktop\TiJO_8\app\app.js: line 20:12
+Mutator: RemoveConditionals
+-           if (az.test(temp[i])) { //sprawdza czy kolejne znaki znajduja sie w przedziale "az"
++           if (true) { //sprawdza czy kolejne znaki znajduja sie w przedziale "az"
+
+Mutant survived! (no coverage)
+C:\Users\Piotrek\Desktop\TiJO_8\app\app.js: line 20:30
+Mutator: BlockStatement
+-           if (az.test(temp[i])) { //sprawdza czy kolejne znaki znajduja sie w przedziale "az"
+-               outputArray.push(temp[i]);
+-           }
++           if (az.test(temp[i])) {
++   }
+
+Mutant survived!
+C:\Users\Piotrek\Desktop\TiJO_8\app\app.js: line 3:8
+Mutator: RemoveConditionals
+-       if (isNaN(num)) {
++       if (false) {
+
+Tests ran:
+    reverseNumber sth
+    returnOnlyLetter sth
+
+Mutant survived!
+C:\Users\Piotrek\Desktop\TiJO_8\app\app.js: line 30:8
+Mutator: RemoveConditionals
+-       if (pattern.test(email)) {
++       if (true) {
+
+Tests ran:
+    isEmail sth
+
+Mutant survived!
+C:\Users\Piotrek\Desktop\TiJO_8\app\app.js: line 3:20
+Mutator: BlockStatement
+-       if (isNaN(num)) {
+-           return false;
+-       }
++       if (isNaN(num)) {
++   }
+
+Tests ran:
+    reverseNumber sth
+    returnOnlyLetter sth
+
+Mutant survived!
+C:\Users\Piotrek\Desktop\TiJO_8\app\app.js: line 32:11
+Mutator: BlockStatement
+-       } else {
+-           return false;
+-       }
++       } else {
++   }
+
+Tests ran:
+    isEmail sth
+
+Mutant survived!
+C:\Users\Piotrek\Desktop\TiJO_8\app\app.js: line 11:0
+Mutator: BlockStatement
+-   {
+-       if (typeof str !== 'string') {
+-           return false;
+-       }
+-       var temp = str.split('');
+-       var az = /^[a-z]/;
+-       var outputArray = [];
+-       var x = temp.length;
+-       for (var i = 0; i <= x; i++) {
+-           if (az.test(temp[i])) { //sprawdza czy kolejne znaki znajduja sie w przedziale "az"
+-               outputArray.push(temp[i]);
+-           }
+-       }
+-       return outputArray.join("");
+-   }
++   {
++   }
+
+Tests ran:
+    reverseNumber sth
+    returnOnlyLetter sth
+    isEmail sth
+
+22 total mutants.
+17 mutants survived.
+  of which 12 were not covered by the tests.
+0 mutants timed out.
+5 mutants killed.
+Ran 0.73 tests per mutant on average.
+Mutation score based on covered code: 50.00%
+Mutation score based on all code: 22.73%
+[2017-05-07 04:26:14.177] [INFO] Stryker - Done in 7 seconds.
+g
