@@ -1,0 +1,27 @@
+> stryker run stryker.conf.js
+
+[2017-05-07 04:53:32.715] [INFO] InputFileResolver - Found 1 of 2 file(s) to be mutated.
+[2017-05-07 04:53:32.720] [INFO] SandboxCoordinator - Starting initial test run. This may take a while.
+[2017-05-07 04:53:34.263] [INFO] Stryker - Initial test run succeeded. Ran 7 tests in 1 second.
+[2017-05-07 04:53:34.293] [INFO] Stryker - 22 Mutant(s) generated
+[2017-05-07 04:53:34.304] [INFO] SandboxCoordinator - Creating 8 test runners (based on CPU count)
+Mutation testing  [==] 100% (ETC 0.0s)[20 killed] [1 survived] [0 no coverage] [1 timeout] [0 error]
+
+Mutant survived!
+C:\Users\Piotrek\Desktop\TiJO_8\app\app.js: line 19:20
+Mutator: BinaryOperator
+-       for (var i = 0; i <= x; i++) {
++       for (var i = 0; i < x; i++) {
+
+Tests ran:
+    returnOnlyLetter sth
+    returnOnlyLetter sth
+
+22 total mutants.
+1 mutants survived.
+1 mutants timed out.
+20 mutants killed.
+Ran 1.68 tests per mutant on average.
+Mutation score based on covered code: 95.45%
+Mutation score based on all code: 95.45%
+[2017-05-07 04:53:48.426] [INFO] Stryker - Done in 15 seconds.
